@@ -79,7 +79,7 @@ const sessionConfig = {
     store,//defines where the session data will be stored 
     secret: secret,//should be taken from .env file
     resave: false,
-    sameSite: 'lax',
+    sameSite: 'none',
     saveUninitialized: true,
     cookie: {
         secure: false,
