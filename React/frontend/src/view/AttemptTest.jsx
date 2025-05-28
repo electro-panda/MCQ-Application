@@ -145,7 +145,7 @@ const AttemptTest = () => {
     return (
         <div className="flex max-w-7xl mx-auto min-h-screen">
             {/* Sidebar */}
-            <aside className="w-1/5 p-4 border-r bg-white shadow-sm">
+            <aside className="hidden md:block w-1/5 p-4 border-r bg-white shadow-sm">
                 <h2 className="font-semibold mb-4 text-lg">Question Panel</h2>
                 <div className="grid grid-cols-4 gap-2">
                     {test.questions.map((q, i) => {
