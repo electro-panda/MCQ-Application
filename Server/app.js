@@ -100,15 +100,24 @@ app.use(passport.session());//for persistent login session
 
 //this will activate all 11 of the middlewares of helmet
 app.use(
-    helmet.contentSecurityPolicy({
-        useDefaults: true,
-        directives: {
-            "script-src": ["'self'", frontend, "'unsafe-inline'"],
-            "style-src": ["'self'", "'unsafe-inline'"],
-            "connect-src": ["'self'", frontend],
-        },
-    })
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        "script-src": ["'self'", frontend, "'unsafe-inline'"],
+        "style-src": ["'self'", "'unsafe-inline'"],
+        "connect-src": ["'self'", frontend],
+        "default-src": ["'self'", frontend],
+        "form-action": ["'self'", frontend],
+        "frame-ancestors": ["'self'"]
+      },
+    },
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" }
+  })
 );
+
 
 
 passport.use(new LocalStrategy(User.authenticate()));
