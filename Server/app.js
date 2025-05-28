@@ -40,6 +40,8 @@ const ExpressError = require("./utils/ExpressError")
 // dotenv.config();
 
 const app = express();
+app.set('trust proxy', 1); // Trust Render’s proxy
+
 
 app.set('query parser', 'extended');
 
@@ -82,7 +84,8 @@ const sessionConfig = {
     sameSite: 'none',
     saveUninitialized: true,
     cookie: {
-        secure: false,
+        secure: true,             // Must be true on HTTPS (Render)
+        sameSite: "none",         // Cross-origin cookies require this
         //You can add on the default name for the session on the web so that other person or hacker won't use it for their benefit
         name: 'default',
         //This ensure that our cookies are only accessible through http not through javascripts and all
