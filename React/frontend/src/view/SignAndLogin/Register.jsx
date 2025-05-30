@@ -114,7 +114,7 @@ export default function Register() {
               </div>
               <div>
                 <label htmlFor="rollno" className="block text-sm/6 font-medium text-gray-900">
-                  Rollno
+                  Id
                 </label>
                 <div className="mt-2">
                   <input
@@ -122,6 +122,7 @@ export default function Register() {
                     name="rollno"
                     {...register("rollno", registerOptions.rollno)}
                     type="number"
+                    placeholder="Rollno or Teacher Id"
                     required
                     // value={user.rollno}
                     autoComplete="off"
