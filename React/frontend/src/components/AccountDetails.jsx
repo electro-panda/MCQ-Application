@@ -24,7 +24,7 @@ export default function AccountInfoTable({ details }) {
                         <td className="border-b border-gray-200 py-2">{details.username}</td>
                     </tr>
                     <tr>
-                        <th className="text-gray-600 pr-4 align-top">Roll no.:</th>
+                        <th className="text-gray-600 pr-4 align-top">ID:</th>
                         <td className="border-b border-gray-200 py-2">{details.rollno}</td>
                     </tr>
                     <tr>
