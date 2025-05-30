@@ -29,7 +29,7 @@
 | React.js     | Frontend library                 |
 | Node.js      | Backend runtime environment      |
 | Mongoose     | ODM for MongoDB                  |
-| JWT          | User authentication              |
+| Passport.js  | User authentication              |
 | Tailwind CSS | UI styling (or your preferred CSS framework) |
 
 ---
